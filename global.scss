@@ -1,0 +1,214 @@
+// global.scss
+@import "./theme.scss";
+
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $--background-color;
+}
+
+body {
+	color: $--text-color;
+	box-sizing: border-box;
+	font-family: $--text-font;
+}
+
+h1, h2 {
+	color: $--title-color;
+}
+
+h3, h4, h5, h6 {
+	color: $--subtitle-color;
+}
+
+a {
+	color: $--feature-light;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: $--feature-light;
+}
+
+
+
+/* ----------------------------CONTAINER-------------------------------- */
+.container {
+  margin: 0 auto;
+  width: auto;
+  @media only screen and (min-width: 1024px) {
+    max-width: $--breakpoint-desktop
+  }
+  @media only screen and (min-width: 1216px) {
+    max-width: $--breakpoint-widescreen
+  }
+  @media only screen and (min-width: 1408px) {
+    max-width: $--breakpoint-fullhd
+  }
+}
+
+/* ----------------------------SECTION-------------------------------- */
+.section {
+  padding: 3rem 1.5rem;
+  display: block;
+}
+.section.is-fullscreen {
+	height: 100vh;
+}
+
+/* ----------------------------NAV-------------------------------- */
+.nav {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav .nav-container:first-child {
+  margin-right: 20px;
+}
+.nav .nav-container:last-child {
+  margin-left: 20px;
+}
+.nav-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+/* ----------------------------COLUMNS-------------------------------- */
+.columns {
+  display: block;
+  @media only screen and (min-width: 769px) {
+    display: flex;
+  }
+}
+.columns .column.is-6 {
+  width: 100%;
+  @media only screen and (min-width: 769px) {
+    width: 50%;
+  }
+}
+.columns .column.is-4 {
+  width: 100%;
+  @media only screen and (min-width: 769px) {
+    width: 33.33%;
+  }
+}
+.column.is-centered {
+	margin: 0 auto;
+}
+
+/* ----------------------------FORMS-------------------------------- */
+label {
+	display: block;
+}
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	padding: 15px 25px;
+	margin: 0 0 1em 0;
+	box-sizing: border-box;
+	border: none;
+	letter-spacing: 0.05em;
+	outline: none;
+}
+button:disabled {
+	color: #999;
+}
+.field {
+	margin: 20px 0;
+}
+.field label {
+	margin: 10px 0;
+	letter-spacing: 0.07em;
+	font-weight: 600;
+	font-size: 0.9em;
+}
+
+/* ----------------------------INPUT-------------------------------- */
+input:disabled {
+	color: #ccc;
+}
+input[type="range"] {
+	height: 0;
+}
+input {
+	width: 100%;
+	@media only screen and (min-width: 769px) {
+    max-width: 400px;
+  }
+}
+input.is-centered {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+input.is-fullwidth {
+	max-width: 100%;
+}
+
+
+/* ----------------------------BUTTONS-------------------------------- */
+button.button {
+	display: flex;
+	align-items: center;
+	background-color: $--white;
+	outline: none;
+	margin: 0;
+	padding: 0 20px;
+	height: 40px;
+	width: auto;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	letter-spacing: 0.1em;
+	font-weight: 600;
+	border-radius: $--border-radius;
+	border: none;
+}
+button.button:hover {
+	opacity: 0.92;
+	cursor: pointer;
+}
+button.is-solid {
+	color: $--white;
+	background-color: $--feature-light;
+}
+button.is-outlined {
+	color: $--feature-light;
+	border: 2px solid $--feature-light;
+	background-color: rgba(0,0,0,0);
+}
+button.has-icon .icon {
+	display: block;
+	width: 20px;
+	height: 100%;
+	margin: 0 5px 0 0;
+}
+button.has-icon .icon img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+button.is-centered {
+	margin: 0 auto;
+}
+
+/* ----------------------------TYPE-------------------------------- */
+.title.is-centered {
+	text-align: center;
+}
+
+/* ----------------------------ERROR-------------------------------- */
+.error {
+	color: $--red !important;
+	padding: 15px;
+	border: 1px solid $--red;
+}
