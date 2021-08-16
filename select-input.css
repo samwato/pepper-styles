@@ -1,0 +1,23 @@
+.controlled_input {
+  background-color: theme-mid-grey;
+  border: none;
+  font-size: 1em;
+  padding: 10px 40px 10px 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: left;
+  color: theme-light-grey;
+  box-sizing: border-box;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(255,255,255)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+	appearance: none;
+	background-repeat: no-repeat, repeat;
+	background-position: right .7em top 50%, 0 0;
+}
+.controlled_input:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
+.controlled_input:focus {
+  outline: none;
+}
